@@ -10,3 +10,5 @@ services:
     environment:
       - FLASK_ENV=production
     restart: unless-stopped
+    # Especifica la plataforma si se tiene problemas de compatibilidad
+    platform: linux/amd64  # Opcional para compatibilidad
