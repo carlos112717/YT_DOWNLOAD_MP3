@@ -20,6 +20,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Copia el resto de los archivos
 COPY . .
+COPY cookies.txt .
 
 # Crea el directorio de descargas
 RUN mkdir -p /app/downloads
