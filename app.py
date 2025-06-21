@@ -108,6 +108,12 @@ def process_download(url, temp_dir):
                 'key': 'FFmpegExtractAudio',
                 'preferredcodec': 'mp3',
                 'preferredquality': '192',
+                'extract_flat': True,
+                'cookiefile': 'cookies.txt',  # Archivo con cookies de sesión
+                'user_agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36...',
+                'extractor_args': {
+                    'youtube': {'skip': ['dash', 'hls']}
+    }
             }],
             'outtmpl': os.path.join(temp_dir, '%(title)s.%(ext)s').replace('\\', '/'),
             'progress_hooks': [progress_hook],
